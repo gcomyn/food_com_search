@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 ##################################################################################################
-### Created by Stan Paszt on December 16, 2016
+### Created by Stan Paszt on December 14, 2016
 ##################################################################################################
 # Copyright 2016 Stan Paszt
 #
@@ -41,7 +41,7 @@ This will download recipes from the search item provided from food.com.
 The output will be written to the current directory.
 The search item is reqired to be entered on the command line.
 '''
-PROG_VER = 'food_com_search 0.0.1'
+PROG_VER = 'food_com_search (fmc) 0.0.1'
 
 ##########################################################################
 class MainDoc(object):
@@ -251,14 +251,17 @@ def main():
                         help='The total number of recipes to return')
     args = parser.parse_args()
 
-    print '#' * (LINE_WIDTH + 6)
-    println(' Starting Process - {0}'.format(PROG_VER))
-    println('#' * LINE_WIDTH)
-    save_recipes(args.input[0], args.total)
+    if not args.input:
+        parser.print_help()
+    else:
+        print '#' * (LINE_WIDTH + 6)
+        println(' Starting Process - {0}'.format(PROG_VER))
+        println('#' * LINE_WIDTH)
+        save_recipes(args.input[0], args.total)
 
-    println('#' * LINE_WIDTH)
-    println(' Completed Process - {0}'.format(PROG_VER))
-    print '#' * (LINE_WIDTH + 6)
+        println('#' * LINE_WIDTH)
+        println(' Completed Process - {0}'.format(PROG_VER))
+        print '#' * (LINE_WIDTH + 6)
     return
 
 ##########################################################################
