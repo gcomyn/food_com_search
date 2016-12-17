@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 ##################################################################################################
-### Created by Stan Paszt on December 14, 2016
+### Created by Stan Paszt on December 16, 2016
 ##################################################################################################
 # Copyright 2016 Stan Paszt
 #
@@ -41,7 +41,7 @@ This will download recipes from the search item provided from food.com.
 The output will be written to the current directory.
 The search item is reqired to be entered on the command line.
 '''
-PROG_VER = 'food_com_search (fms) 0.0.1'
+PROG_VER = 'food_com_search 0.0.1'
 
 ##########################################################################
 class MainDoc(object):
